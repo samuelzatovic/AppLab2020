@@ -3,6 +3,16 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello AppsLab 2020!");
+    }
+   public static boolean isPalindrome(String palindrome)
+    {
+        int i = 0, j = palindrome.length() - 1;
+        while (i < j) {
+            if (palindrome.charAt(i) != palindrome.charAt(j))
+                return false;
+            i++;
+            j--;
+        }
+        return true;
     }
 }
