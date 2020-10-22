@@ -3,22 +3,10 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        int[] numbers = {1, 4, 2, 3, 19, 28, 142, 333};
-        System.out.println(warOfNumbers(numbers));
+        System.out.println(checkEnding("ahoj", "oj"));
     }
-    public static boolean isNumOdd(int num){
-        return num % 2 != 0;
-    }
-    public static int warOfNumbers(int[] numbers)
+    public static boolean checkEnding(String a, String b)
     {
-        int even = 0, odd = 0;
-        for (int number : numbers) {
-            if (isNumOdd(number)) {
-                odd += number;
-            } else {
-                even += number;
-            }
-        }
-        return Math.abs(even - odd);
+        return (a.endsWith(b));
     }
 }
